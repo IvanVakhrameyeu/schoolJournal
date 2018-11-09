@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\vanov\Documents\Visual Studio 2017\Projects\Wpf журнал учащихся школы\Wpf журнал учащихся школы\obj\Debug\
+C:\Users\vanov\Documents\GitHub\schoolJournal\Wpf журнал учащихся школы\obj\Debug\
 Wpf_журнал_учащихся_школы
 none
 false
 DEBUG;TRACE
-C:\Users\vanov\Documents\Visual Studio 2017\Projects\Wpf журнал учащихся школы\Wpf журнал учащихся школы\App.xaml
-15-423252416
+C:\Users\vanov\Documents\GitHub\schoolJournal\Wpf журнал учащихся школы\App.xaml
+15623555871
 
-24980285216
-21567975432
-MainWindow.xaml;UControl\UCCharts.xaml;UControl\UCClass.xaml;UControl\UCEmployee.xaml;UControl\UCLessons.xaml;UControl\UCLogs.xaml;UControl\UCStudent.xaml;UControl\UCStudentLogs.xaml;WindowAddEmployee.xaml;WindowAddRating.xaml;WindowAddStudent.xaml;WindowEditEmployee.xaml;WindowEditRating.xaml;WindowEditStudent.xaml;WindowLogin.xaml;
+24-317050198
+21-618982402
+MainWindow.xaml;UControl\UCCharts.xaml;UControl\UCClass.xaml;UControl\UCEmployee.xaml;UControl\UCLessons.xaml;UControl\UCLogs.xaml;UControl\UCStudent.xaml;UControl\UCStudentLogs.xaml;WAdd\WindowAddEmployee.xaml;WAdd\WindowAddRating.xaml;WAdd\WindowAddStudent.xaml;WEdit\WindowEditEmployee.xaml;WEdit\WindowEditRating.xaml;WEdit\WindowEditStudent.xaml;WindowLogin.xaml;
 
-False
+True
 

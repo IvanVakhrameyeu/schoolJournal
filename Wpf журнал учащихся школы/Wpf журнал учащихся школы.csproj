@@ -99,22 +99,22 @@
     <Compile Include="UControl\UCStudentLogs.xaml.cs">
       <DependentUpon>UCStudentLogs.xaml</DependentUpon>
     </Compile>
-    <Compile Include="WindowAddEmployee.xaml.cs">
+    <Compile Include="WAdd\WindowAddEmployee.xaml.cs">
       <DependentUpon>WindowAddEmployee.xaml</DependentUpon>
     </Compile>
-    <Compile Include="WindowAddRating.xaml.cs">
+    <Compile Include="WAdd\WindowAddRating.xaml.cs">
       <DependentUpon>WindowAddRating.xaml</DependentUpon>
     </Compile>
-    <Compile Include="WindowAddStudent.xaml.cs">
+    <Compile Include="WAdd\WindowAddStudent.xaml.cs">
       <DependentUpon>WindowAddStudent.xaml</DependentUpon>
     </Compile>
-    <Compile Include="WindowEditEmployee.xaml.cs">
+    <Compile Include="WEdit\WindowEditEmployee.xaml.cs">
       <DependentUpon>WindowEditEmployee.xaml</DependentUpon>
     </Compile>
-    <Compile Include="WindowEditRating.xaml.cs">
+    <Compile Include="WEdit\WindowEditRating.xaml.cs">
       <DependentUpon>WindowEditRating.xaml</DependentUpon>
     </Compile>
-    <Compile Include="WindowEditStudent.xaml.cs">
+    <Compile Include="WEdit\WindowEditStudent.xaml.cs">
       <DependentUpon>WindowEditStudent.xaml</DependentUpon>
     </Compile>
     <Compile Include="WindowLogin.xaml.cs">
@@ -161,27 +161,27 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="WindowAddEmployee.xaml">
+    <Page Include="WAdd\WindowAddEmployee.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="WindowAddRating.xaml">
+    <Page Include="WAdd\WindowAddRating.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="WindowAddStudent.xaml">
+    <Page Include="WAdd\WindowAddStudent.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="WindowEditEmployee.xaml">
+    <Page Include="WEdit\WindowEditEmployee.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="WindowEditRating.xaml">
+    <Page Include="WEdit\WindowEditRating.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="WindowEditStudent.xaml">
+    <Page Include="WEdit\WindowEditStudent.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

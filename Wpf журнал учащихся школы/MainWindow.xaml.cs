@@ -18,6 +18,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using WPF_журнал_учащихся;
 using Wpf_журнал_учащихся_школы.UControl;
+using Wpf_журнал_учащихся_школы.WAdd;
 using Xceed.Wpf.DataGrid;
 
 namespace Wpf_журнал_учащихся_школы

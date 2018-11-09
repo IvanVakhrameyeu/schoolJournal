@@ -64,3 +64,69 @@ C:\Users\vanov\Documents\Visual Studio 2017\Projects\Wpf журнал учащи
 C:\Users\vanov\Documents\Visual Studio 2017\Projects\Wpf журнал учащихся школы\Wpf журнал учащихся школы\bin\Debug\LiveCharts.Wpf.xml
 C:\Users\vanov\Documents\Visual Studio 2017\Projects\Wpf журнал учащихся школы\Wpf журнал учащихся школы\obj\Debug\UControl\UCCharts.g.cs
 C:\Users\vanov\Documents\Visual Studio 2017\Projects\Wpf журнал учащихся школы\Wpf журнал учащихся школы\obj\Debug\UControl\UCCharts.baml
+C:\Users\vanov\Documents\GitHub\schoolJournal\Wpf журнал учащихся школы\obj\Debug\Wpf журнал учащихся школы.csprojResolveAssemblyReference.cache
+C:\Users\vanov\Documents\GitHub\schoolJournal\Wpf журнал учащихся школы\obj\Debug\MainWindow.g.cs
+C:\Users\vanov\Documents\GitHub\schoolJournal\Wpf журнал учащихся школы\obj\Debug\UControl\UCCharts.g.cs
+C:\Users\vanov\Documents\GitHub\schoolJournal\Wpf журнал учащихся школы\obj\Debug\UControl\UCClass.g.cs
+C:\Users\vanov\Documents\GitHub\schoolJournal\Wpf журнал учащихся школы\obj\Debug\UControl\UCEmployee.g.cs
+C:\Users\vanov\Documents\GitHub\schoolJournal\Wpf журнал учащихся школы\obj\Debug\UControl\UCLessons.g.cs
+C:\Users\vanov\Documents\GitHub\schoolJournal\Wpf журнал учащихся школы\obj\Debug\UControl\UCLogs.g.cs
+C:\Users\vanov\Documents\GitHub\schoolJournal\Wpf журнал учащихся школы\obj\Debug\UControl\UCStudent.g.cs
+C:\Users\vanov\Documents\GitHub\schoolJournal\Wpf журнал учащихся школы\obj\Debug\UControl\UCStudentLogs.g.cs
+C:\Users\vanov\Documents\GitHub\schoolJournal\Wpf журнал учащихся школы\obj\Debug\Wadd\WindowAddEmployee.g.cs
+C:\Users\vanov\Documents\GitHub\schoolJournal\Wpf журнал учащихся школы\obj\Debug\WindowLogin.g.cs
+C:\Users\vanov\Documents\GitHub\schoolJournal\Wpf журнал учащихся школы\obj\Debug\App.g.cs
+C:\Users\vanov\Documents\GitHub\schoolJournal\Wpf журнал учащихся школы\obj\Debug\Wpf журнал учащихся школы_MarkupCompile.cache
+C:\Users\vanov\Documents\GitHub\schoolJournal\Wpf журнал учащихся школы\obj\Debug\Wpf журнал учащихся школы_MarkupCompile.lref
+C:\Users\vanov\Documents\GitHub\schoolJournal\Wpf журнал учащихся школы\obj\Debug\Wpf журнал учащихся школы.exe
+C:\Users\vanov\Documents\GitHub\schoolJournal\Wpf журнал учащихся школы\obj\Debug\Wpf журнал учащихся школы.pdb
+C:\Users\vanov\Documents\GitHub\schoolJournal\Wpf журнал учащихся школы\bin\Debug\Wpf журнал учащихся школы.exe.config
+C:\Users\vanov\Documents\GitHub\schoolJournal\Wpf журнал учащихся школы\bin\Debug\Wpf журнал учащихся школы.exe
+C:\Users\vanov\Documents\GitHub\schoolJournal\Wpf журнал учащихся школы\bin\Debug\Wpf журнал учащихся школы.pdb
+C:\Users\vanov\Documents\GitHub\schoolJournal\Wpf журнал учащихся школы\bin\Debug\LiveCharts.dll
+C:\Users\vanov\Documents\GitHub\schoolJournal\Wpf журнал учащихся школы\bin\Debug\LiveCharts.Wpf.dll
+C:\Users\vanov\Documents\GitHub\schoolJournal\Wpf журнал учащихся школы\bin\Debug\Xceed.Wpf.AvalonDock.dll
+C:\Users\vanov\Documents\GitHub\schoolJournal\Wpf журнал учащихся школы\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.dll
+C:\Users\vanov\Documents\GitHub\schoolJournal\Wpf журнал учащихся школы\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Metro.dll
+C:\Users\vanov\Documents\GitHub\schoolJournal\Wpf журнал учащихся школы\bin\Debug\Xceed.Wpf.AvalonDock.Themes.VS2010.dll
+C:\Users\vanov\Documents\GitHub\schoolJournal\Wpf журнал учащихся школы\bin\Debug\Xceed.Wpf.DataGrid.dll
+C:\Users\vanov\Documents\GitHub\schoolJournal\Wpf журнал учащихся школы\bin\Debug\Xceed.Wpf.Toolkit.dll
+C:\Users\vanov\Documents\GitHub\schoolJournal\Wpf журнал учащихся школы\bin\Debug\LiveCharts.pdb
+C:\Users\vanov\Documents\GitHub\schoolJournal\Wpf журнал учащихся школы\bin\Debug\LiveCharts.xml
+C:\Users\vanov\Documents\GitHub\schoolJournal\Wpf журнал учащихся школы\bin\Debug\LiveCharts.Wpf.pdb
+C:\Users\vanov\Documents\GitHub\schoolJournal\Wpf журнал учащихся школы\bin\Debug\LiveCharts.Wpf.xml
+C:\Users\vanov\Documents\GitHub\schoolJournal\Wpf журнал учащихся школы\bin\Debug\de\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\vanov\Documents\GitHub\schoolJournal\Wpf журнал учащихся школы\bin\Debug\es\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\vanov\Documents\GitHub\schoolJournal\Wpf журнал учащихся школы\bin\Debug\fr\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\vanov\Documents\GitHub\schoolJournal\Wpf журнал учащихся школы\bin\Debug\hu\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\vanov\Documents\GitHub\schoolJournal\Wpf журнал учащихся школы\bin\Debug\it\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\vanov\Documents\GitHub\schoolJournal\Wpf журнал учащихся школы\bin\Debug\pt-BR\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\vanov\Documents\GitHub\schoolJournal\Wpf журнал учащихся школы\bin\Debug\ro\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\vanov\Documents\GitHub\schoolJournal\Wpf журнал учащихся школы\bin\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\vanov\Documents\GitHub\schoolJournal\Wpf журнал учащихся школы\bin\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\vanov\Documents\GitHub\schoolJournal\Wpf журнал учащихся школы\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\vanov\Documents\GitHub\schoolJournal\Wpf журнал учащихся школы\obj\Debug\WAdd\WindowAddRating.g.cs
+C:\Users\vanov\Documents\GitHub\schoolJournal\Wpf журнал учащихся школы\obj\Debug\WAdd\WindowAddStudent.g.cs
+C:\Users\vanov\Documents\GitHub\schoolJournal\Wpf журнал учащихся школы\obj\Debug\MainWindow.baml
+C:\Users\vanov\Documents\GitHub\schoolJournal\Wpf журнал учащихся школы\obj\Debug\UControl\UCCharts.baml
+C:\Users\vanov\Documents\GitHub\schoolJournal\Wpf журнал учащихся школы\obj\Debug\UControl\UCClass.baml
+C:\Users\vanov\Documents\GitHub\schoolJournal\Wpf журнал учащихся школы\obj\Debug\UControl\UCEmployee.baml
+C:\Users\vanov\Documents\GitHub\schoolJournal\Wpf журнал учащихся школы\obj\Debug\UControl\UCLessons.baml
+C:\Users\vanov\Documents\GitHub\schoolJournal\Wpf журнал учащихся школы\obj\Debug\UControl\UCLogs.baml
+C:\Users\vanov\Documents\GitHub\schoolJournal\Wpf журнал учащихся школы\obj\Debug\UControl\UCStudent.baml
+C:\Users\vanov\Documents\GitHub\schoolJournal\Wpf журнал учащихся школы\obj\Debug\UControl\UCStudentLogs.baml
+C:\Users\vanov\Documents\GitHub\schoolJournal\Wpf журнал учащихся школы\obj\Debug\WAdd\WindowAddEmployee.baml
+C:\Users\vanov\Documents\GitHub\schoolJournal\Wpf журнал учащихся школы\obj\Debug\WAdd\WindowAddRating.baml
+C:\Users\vanov\Documents\GitHub\schoolJournal\Wpf журнал учащихся школы\obj\Debug\WAdd\WindowAddStudent.baml
+C:\Users\vanov\Documents\GitHub\schoolJournal\Wpf журнал учащихся школы\obj\Debug\WindowLogin.baml
+C:\Users\vanov\Documents\GitHub\schoolJournal\Wpf журнал учащихся школы\obj\Debug\Wpf журнал учащихся школы.g.resources
+C:\Users\vanov\Documents\GitHub\schoolJournal\Wpf журнал учащихся школы\obj\Debug\Wpf_журнал_учащихся_школы.Properties.Resources.resources
+C:\Users\vanov\Documents\GitHub\schoolJournal\Wpf журнал учащихся школы\obj\Debug\Wpf журнал учащихся школы.csproj.GenerateResource.cache
+C:\Users\vanov\Documents\GitHub\schoolJournal\Wpf журнал учащихся школы\obj\Debug\Wpf журнал учащихся школы.csproj.CoreCompileInputs.cache
+C:\Users\vanov\Documents\GitHub\schoolJournal\Wpf журнал учащихся школы\obj\Debug\Wpf журнал учащихся школы.csproj.CopyComplete
+C:\Users\vanov\Documents\GitHub\schoolJournal\Wpf журнал учащихся школы\obj\Debug\WEdit\WindowEditEmployee.g.cs
+C:\Users\vanov\Documents\GitHub\schoolJournal\Wpf журнал учащихся школы\obj\Debug\WEdit\WindowEditRating.g.cs
+C:\Users\vanov\Documents\GitHub\schoolJournal\Wpf журнал учащихся школы\obj\Debug\WEdit\WindowEditStudent.g.cs
+C:\Users\vanov\Documents\GitHub\schoolJournal\Wpf журнал учащихся школы\obj\Debug\WEdit\WindowEditEmployee.baml
+C:\Users\vanov\Documents\GitHub\schoolJournal\Wpf журнал учащихся школы\obj\Debug\WEdit\WindowEditRating.baml
+C:\Users\vanov\Documents\GitHub\schoolJournal\Wpf журнал учащихся школы\obj\Debug\WEdit\WindowEditStudent.baml

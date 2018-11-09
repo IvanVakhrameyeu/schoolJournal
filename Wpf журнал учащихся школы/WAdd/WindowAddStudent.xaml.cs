@@ -14,7 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using WPF_журнал_учащихся;
 
-namespace Wpf_журнал_учащихся_школы
+namespace Wpf_журнал_учащихся_школы.WAdd
 {
     /// <summary>
     /// Логика взаимодействия для WindowAddStudent.xaml
