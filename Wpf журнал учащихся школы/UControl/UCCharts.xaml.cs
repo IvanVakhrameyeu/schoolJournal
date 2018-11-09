@@ -252,7 +252,6 @@ namespace Wpf_журнал_учащихся_школы.UControl
 
         private void ApplayOnClick(object sender, RoutedEventArgs e)
         {
-            createChartsSubjectsGroup();
             try
             {
                 MessageBox.Show(SubjectCB.SelectedItem.ToString() + " " + GroupCB.SelectedItem.ToString() + " " + FIOCB.SelectedItem.ToString());

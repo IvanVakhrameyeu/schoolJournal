@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <DataGrid FontFamily="Verdana" FontSize="11"  ColumnHeaderHeight="49" IsReadOnly="True" AutoGenerateColumns="False"  Name="DataGridTotal" SelectionChanged="DataGridTotal_SelectionChanged" Background="{x:Null}">
+        <DataGrid  FontFamily="Verdana" FontSize="11" ColumnHeaderHeight="49" IsReadOnly="True" AutoGenerateColumns="False"  Name="DataGridTotal" SelectionChanged="DataGridTotal_SelectionChanged" Background="{x:Null}">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Предмет" Binding="{Binding SubName }" IsReadOnly="True"></DataGridTextColumn>
                 <DataGridTextColumn Header="ФИО" Binding="{Binding FIOEmployee}" IsReadOnly="True"></DataGridTextColumn>
