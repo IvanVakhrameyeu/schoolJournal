@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using WPF_журнал_учащихся;
+using Wpf_журнал_учащихся_школы.MainUC;
 
 namespace Wpf_журнал_учащихся_школы
 {

@@ -56,7 +56,7 @@ namespace Wpf_журнал_учащихся_школы.WAdd
                 string sql = "INSERT INTO Logs (Data , StudentID, SubjectsID, Missed, Rating) " +
            "VALUES (@Data, @StudentID, @SubjectsID, @Missed, @Rating)";
                 
-                    WorkWithBD.inputLogs(sql, DayB.Text, idfio, MainWindow.SubjectID, ((MissedChB.IsChecked == true) ? "н" : "NULL"), RatingCB.Text); //короткая запись сделать
+                    WorkWithBD.inputLogs(sql, DayB.Text, idfio, MainWindow.SubjectID, ((MissedChB.IsChecked == true) ? "н" : ""), RatingCB.Text); //короткая запись сделать
 
                 Close();
         }

@@ -38,36 +38,6 @@
             </Rectangle.Fill>
         </Rectangle>
         <Rectangle Fill="#FFCCEEFF" HorizontalAlignment="Left" Margin="180,0,0,0" Width="1"/>
-        <Grid>
-
-            <ListView x:Name="MainListView" Width="189" HorizontalAlignment="Left" 
-                      x:FieldModifier="public"
-                       SelectionChanged="MainListView_SelectionChanged"
-                        Foreground="Black" 
-                        BorderBrush="Black" />
-            <Label x:Name="TotalLB" FontSize="20" Height="50" Width="230" VerticalAlignment="Top" Margin="194,0,368,0"/>
-            <ComboBox x:Name="TotalCB" FontSize="20" Height="40" Width="350" VerticalAlignment="Top" HorizontalAlignment="Right" SelectionChanged="TotalCB_SelectionChanged"/>
-            
-        </Grid>
-        <Grid>
-            <Grid x:Name="ContentGrid" Height="317" Width="590" HorizontalAlignment="Right"
-                       VerticalAlignment="Bottom" Margin="0,0,0,33">
-                <Path Data="M0,5.6875 L0,480" HorizontalAlignment="Left" Height="474.312" Margin="0,5.688,0,-29" Stretch="Fill" VerticalAlignment="Top" Width="0">
-                    <Path.Fill>
-                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                            <GradientStop Color="Black" Offset="0"/>
-                            <GradientStop Color="#0200A2FF" Offset="0.962"/>
-                            <GradientStop Color="#BE23AEFF"/>
-                            <GradientStop Color="#4A0DA6FF" Offset="0.197"/>
-                        </LinearGradientBrush>
-                    </Path.Fill>
-                </Path>
-            </Grid>
-        </Grid>
-        <Grid>
-            <Button Content="Добавить" Margin="276,0,416,0" Height="30"  Width="100" x:Name="AddBN" Click="AddBN_Click" HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalAlignment="Bottom" Background="#FF50B2E2" BorderBrush="#FF50B2E2" FontFamily="Verdana" />
-            <Button Content="Изменить" Margin="411,0,281,0" Height="30"  Width="100" x:Name="EditBN" Click="EditBN_Click" HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalAlignment="Bottom" Background="#FF50B2E2" BorderBrush="#FF50B2E2" FontFamily="Verdana"/>
-            <Button Content="Удалить" Margin="541,0,151,0" Height="30"  Width="100" x:Name="DelBN" Click="DelBN_Click" HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalAlignment="Bottom" Background="#FF50B2E2" BorderBrush="#FF50B2E2" FontFamily="Verdana" />
-        </Grid>
+        <Grid x:Name="GridListVew"/>
     </Grid>
 </Window>

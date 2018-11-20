@@ -78,6 +78,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="MainUC\UCAdmin.xaml.cs">
+      <DependentUpon>UCAdmin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainUC\UCTeacher.xaml.cs">
+      <DependentUpon>UCTeacher.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UControl\UCCharts.xaml.cs">
       <DependentUpon>UCCharts.xaml</DependentUpon>
     </Compile>
@@ -121,6 +127,14 @@
       <DependentUpon>WindowLogin.xaml</DependentUpon>
     </Compile>
     <Compile Include="WorkWithBD.cs" />
+    <Page Include="MainUC\UCAdmin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainUC\UCTeacher.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

@@ -17,6 +17,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using WPF_журнал_учащихся;
+using Wpf_журнал_учащихся_школы.MainUC;
 using Wpf_журнал_учащихся_школы.UControl;
 using Wpf_журнал_учащихся_школы.WAdd;
 using Xceed.Wpf.DataGrid;
@@ -37,6 +38,10 @@ namespace Wpf_журнал_учащихся_школы
         static public string NameGroup;
         static public string SubName;
 
+        //    <Label x:Name="TotalLB" FontSize="20" Height="50" Width="230" VerticalAlignment="Top" Margin="194,0,368,0"/>
+        //    <ComboBox x:Name="TotalCB" FontSize="20" Height="40" Width="350" VerticalAlignment="Top" HorizontalAlignment="Right" SelectionChanged="TotalCB_SelectionChanged"/>
+        
+
         public static string Access = ""; // уровень доступа пользователя
         public DataRowView rows
         {
@@ -47,174 +52,27 @@ namespace Wpf_журнал_учащихся_школы
         {
             WindowLogin windowLogin = new WindowLogin();
             windowLogin.ShowDialog();
-
             if (Access == "") Close();
             else
             {
                 InitializeComponent();
                 start();
             }
-        }
+        }   
+        //private void TotalCB_SelectionChanged(object sender, SelectionChangedEventArgs e) // вывод в грид предметов, для студента
+        //{
+        //    //try
+        //    //{
+        //        ContentGrid.Children.Clear();
+        //        SubName = TotalCB.SelectedItem.ToString();
 
-        private void refreshGrid() // обновление грида, после нажатий различных кнопок
-        {
-            switch (MainListView.Items[MainListView.SelectedIndex].ToString())
-            {
-                case "Студенты":
-                    ContentGrid.Children.Clear();
-                    ContentGrid.Children.Add(new UCStudent());
-                    break;
-                case "Классы":
-                    ContentGrid.Children.Clear();
-                    ContentGrid.Children.Add(new UCClass());
-                    break;
-                case "Предметы":
-                    ContentGrid.Children.Clear();
-                    ContentGrid.Children.Add(new UCLessons());
-                    break;
-
-                case "Учителя":
-                    ContentGrid.Children.Clear();
-                    ContentGrid.Children.Add(new UCEmployee());
-                    break;
-                case "Отчеты":
-                    ContentGrid.Children.Clear();
-
-                    break;
-                default:
-                    ContentGrid.Children.Clear();
-                    ContentGrid.Children.Add(new UCLogs());
-                    break;
-            }
-        }
-        private void AddBN_Click(object sender, RoutedEventArgs e) // добавление
-        {
-            try
-            {
-                switch (MainListView.Items[MainListView.SelectedIndex].ToString())
-                {
-                    case "Студенты":
-                        WindowAddStudent windowAddStudent = new WindowAddStudent();
-                        windowAddStudent.ShowDialog();
-                        refreshGrid();
-                        break;
-                    case "Классы":
-                        refreshGrid();
-                        break;
-                    case "Предметы":
-                        refreshGrid();
-                        break;
-                    case "Учителя":
-                        WindowAddEmployee windowAddEmployee = new WindowAddEmployee();
-                        windowAddEmployee.ShowDialog();
-                        refreshGrid();
-                        break;
-                    case "Отчеты":
-
-                        MessageBox.Show("Отчеты");
-                        break;
-
-                    default:
-                        WindowAddRating windowAddRating = new WindowAddRating();
-                        windowAddRating.ShowDialog();
-
-                        refreshGrid();
-                        break;
-                }
-            }
-            catch { }
-        }
-        private void EditBN_Click(object sender, RoutedEventArgs e) // изменение
-        {
-            try
-            {
-                switch (MainListView.Items[MainListView.SelectedIndex].ToString())
-                {
-                    case "Студенты":
-                        WindowEditStudent windowEditStudent = new WindowEditStudent();
-                        windowEditStudent.ShowDialog();
-                        refreshGrid();
-                        break;
-
-                    case "Классы":
-
-
-                        refreshGrid();
-                        break;
-                    case "Предметы":
-
-                        refreshGrid();
-                        break;
-
-                    case "Учителя":
-                        WindowEditEmployee windowEditEmployee = new WindowEditEmployee();
-                        windowEditEmployee.ShowDialog();
-                        refreshGrid();
-                        break;
-
-                    case "Отчеты":
-                        break;
-                    default:
-                        WindowEditRating windowEditRating = new WindowEditRating();
-                        windowEditRating.ShowDialog();
-                        refreshGrid();
-                        break;
-                }
-            }
-            catch { }
-        }
-        private void DelBN_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-        private void TotalCB_SelectionChanged(object sender, SelectionChangedEventArgs e) // вывод в грид предметов, для студента
-        {
-            //try
-            //{
-
-                ContentGrid.Children.Clear();
-                SubName = TotalCB.SelectedItem.ToString();
-
-                ContentGrid.Children.Add(new UCStudentLogs());
-            
-
-            //}
-            //catch { }
-        }
-        private void MainListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            switch (MainListView.Items[MainListView.SelectedIndex].ToString())
-            {
-                case "Студенты":
-                    SelecStudent();
-                    break;
-                case "Классы":
-                    SelectClass();
-                    break;
-                case "Предметы":
-                    SelectLesson();
-                    break;
-                case "Учителя":
-                    SelectEmployee();
-                    break;
-                case "Отчеты":
-                    refreshGrid();
-
-                    ContentGrid.Children.Add(new UCCharts());
-                    break;
-                default:
-                    NameGroup = MainListView.Items[MainListView.SelectedIndex].ToString();
-
-                    ContentGrid.Children.Clear();
-                    ContentGrid.Children.Add(new UCLogs());
-                    break;
-            }
-        }
-        //--------------------------------------------------
+        //        ContentGrid.Children.Add(new UCStudentLogs());
+        //    //}
+        //    //catch { }
+        //}
+        ////--------------------------------------------------
         private string[] _labels;
-
         public SeriesCollection SeriesCollection { get; set; }
-
         public string[] Labels
         {
             get { return _labels; }
@@ -245,7 +103,6 @@ namespace Wpf_журнал_учащихся_школы
                     Fill = Brushes.Transparent
                 }
             };
-
             Labels = new[]
             {
                 DateTime.Now.ToString("23.12"),
@@ -254,10 +111,7 @@ namespace Wpf_журнал_учащихся_школы
                 DateTime.Now.AddDays(3).ToString("23.12"),
                 DateTime.Now.AddDays(4).ToString("24.12"),
             };
-
-
         }
-
         //----------------------------------------------------------------------------------------
         private void start() // выбор уровня доступа, для пользователя
         {
@@ -270,85 +124,52 @@ namespace Wpf_журнал_учащихся_школы
                     AccessMiddle();
                     break;
                 case "Low":
-                    AccessLow();
+                  //  AccessLow();
                     break;
             }
         }
-        private void AccessHigh() // уровень доступа для администратора
+        private void AccessHigh() // Load UserControl with Access - High
         {
-            MainListView.Items.Add(new Button().Content = "Студенты");
-            MainListView.Items.Add(new Button().Content = "Классы");
-            MainListView.Items.Add(new Button().Content = "Предметы");
-            MainListView.Items.Add(new Button().Content = "Учителя");
-            MainListView.Items.Add(new Button().Content = "Отчеты");
-            TotalCB.Visibility = Visibility.Collapsed;
-            TotalLB.Visibility = Visibility.Collapsed;
+            GridListVew.Children.Add(new UCAdmin());
         }
-        private void AccessMiddle()   // уровень доступа для учителей\\\\\\(в комбо боксе предмет?)ОБСУДИТЬ КАК БУДЕТ ВЫГЛЯДИТЬ
+        private void AccessMiddle()   // Load UserControl with access for Teacher 
         {
-            DataSet User = new DataSet();
-            string sql = "SELECT Name FROM GroupName";
-            User = WorkWithBD.outPutdb(sql).Tables[0].DataSet;
-
-            for (int i = 0; i < User.Tables[0].DefaultView.Count; i++)
-            {
-                MainListView.Items.Add(new Button().Content = User.Tables[0].DefaultView[i].Row[0].ToString());
-            }
-            sql = "SELECT Employee.SubjectsID, Subjects.SubName FROM Employee JOIN Subjects ON (Employee.SubjectsID = Subjects.SubjectsID) WHERE FIOEmployee = '" + NAME + "' ";
-            User = WorkWithBD.outPutdb(sql).Tables[0].DataSet;
-            SubjectID = User.Tables[0].DefaultView[0].Row[0].ToString();
-
-            TotalLB.Content= MainWindow.NAME + "   " + User.Tables[0].DefaultView[0].Row[1].ToString();
-            TotalCB.Visibility= Visibility.Collapsed;
+            GridListVew.Children.Add(new UCTeacher());
         }
-        private void AccessLow() // уровень доступа для учащихся\родителей
-        {
-            MainListView.Visibility = Visibility.Collapsed;
-            DataSet User = new DataSet();
+        //private void AccessLow() // уровень доступа для учащихся\родителей
+        //{
+        //    MainListView.Visibility = Visibility.Collapsed;
+        //    DataSet User = new DataSet();
             
-            string sql = "SELECT SubName FROM Lessons " +
-                "JOIN Subjects ON (Lessons.SubjectsID=Subjects.SubjectsID) " +
-                "WHERE Lessons.GroupNameID = " + GroupNameID + "";
-            User = WorkWithBD.outPutdb(sql).Tables[0].DataSet;
+        //    string sql = "SELECT SubName FROM Lessons " +
+        //        "JOIN Subjects ON (Lessons.SubjectsID=Subjects.SubjectsID) " +
+        //        "WHERE Lessons.GroupNameID = " + GroupNameID + "";
+        //    User = WorkWithBD.outPutdb(sql).Tables[0].DataSet;
 
-            for (int i = 0; i < User.Tables[0].DefaultView.Count; i++)
-            {
-                TotalCB.Items.Add(User.Tables[0].DefaultView[i].Row[0].ToString());
-            }
+        //    for (int i = 0; i < User.Tables[0].DefaultView.Count; i++)
+        //    {
+        //        TotalCB.Items.Add(User.Tables[0].DefaultView[i].Row[0].ToString());
+        //    }
 
-        }
-        private void SelecStudent() // вывод всех учащихся (возможно удалить комбо бокс) возможно взять из старой версии динамич загрузку данных
-        {
-            TotalLB.Content = "Выберите Класс";
-            TotalCB.Items.Clear();
+        //}
+        //public void SelecStudent() // вывод всех учащихся (возможно удалить комбо бокс) возможно взять из старой версии динамич загрузку данных
+        //{
+        //    TotalLB.Content = "Выберите Класс";
+        //    TotalCB.Items.Clear();
 
-            DataSet User = new DataSet();
-            string sql = "SELECT Name FROM GroupName";
-            User = WorkWithBD.outPutdb(sql).Tables[0].DataSet;
+        //    DataSet User = new DataSet();
+        //    string sql = "SELECT Name FROM GroupName";
+        //    User = WorkWithBD.outPutdb(sql).Tables[0].DataSet;
 
-            TotalCB.Items.Add("Все");
-            for (int i = 0; i < User.Tables[0].DefaultView.Count; i++)
-            {
-                TotalCB.Items.Add(User.Tables[0].DefaultView[i].Row[0].ToString());
-            }
+        //    TotalCB.Items.Add("Все");
+        //    for (int i = 0; i < User.Tables[0].DefaultView.Count; i++)
+        //    {
+        //        TotalCB.Items.Add(User.Tables[0].DefaultView[i].Row[0].ToString());
+        //    }
 
-            ContentGrid.Children.Clear();
-            ContentGrid.Children.Add(new UCStudent());
-        }
-        private void SelectLesson() // вывод всех предметов к классам
-        {
-            ContentGrid.Children.Clear();
-            ContentGrid.Children.Add(new UCLessons());
-        }
-        private void SelectClass() 
-        {
-            ContentGrid.Children.Clear();
-            ContentGrid.Children.Add(new UCClass());
-        }
-        private void SelectEmployee()
-        {
-            ContentGrid.Children.Clear();
-            ContentGrid.Children.Add(new UCEmployee());
-        }
+        //    ContentGrid.Children.Clear();
+        //    ContentGrid.Children.Add(new UCStudent());
+        //}
+        
     }
 }

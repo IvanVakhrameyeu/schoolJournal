@@ -62,7 +62,7 @@ namespace Wpf_журнал_учащихся_школы.UControl
                 "JOIN Subjects ON (Lessons.SubjectsID = Subjects.SubjectsID) " +
                 "JOIN GroupName ON (Lessons.GroupNameID = GroupName.GroupNameID) " +
                 "Where Subjects.SubName = '" + SubjectCB.SelectedItem.ToString() + "'");
-
+           // GroupCB.Items.Add("Все");
             for (int i = 0; i < User.Tables[0].DefaultView.Count; i++)
             {
                 GroupCB.Items.Add(User.Tables[0].DefaultView[i].Row[0].ToString());
@@ -154,6 +154,18 @@ namespace Wpf_журнал_учащихся_школы.UControl
             YFormatter = value => value.ToString("C");            
 
             DataContext = this;
+        }
+        private void clearCharts()
+        {
+            try
+            {
+                if (Labels.Count != 0)
+                {
+                    Labels.Clear();
+                    SeriesCollection.Clear();
+                }
+            }
+            catch { }
         }
         private void createChartsSubjectsGroup()// вывод, когда выбран предмет и группа
         {
@@ -252,27 +264,28 @@ namespace Wpf_журнал_учащихся_школы.UControl
 
         private void ApplayOnClick(object sender, RoutedEventArgs e)
         {
-            try
+            //clearCharts();
+            var current= SubjectCB?.Text ?? "";
+            int res = 0;
+            if (current != "")
             {
-                MessageBox.Show(SubjectCB.SelectedItem.ToString() + " " + GroupCB.SelectedItem.ToString() + " " + FIOCB.SelectedItem.ToString());
+                res = 2;
+                if((GroupCB?.Text ?? "")!="" & GroupCB.Text!="Все")
+                {
+                    res = 1;
+                }
             }
-            catch
+            switch (res)
             {
-                try
-                {
+                case 0: MessageBox.Show("Выберите предмет");
+                    break;
+                case 1:
                     createChartsSubjectsGroup();
-                }
-                catch
-                {
-                    try
-                    {
-                        createChartsSubjects();
-                    }
-                    catch
-                    {
-                        MessageBox.Show("Выберите предмет");
-                    }
-                }
+                    break;
+                case 2:
+                    createChartsSubjects();
+                    break;
+                default: break;
             }
         }
     }

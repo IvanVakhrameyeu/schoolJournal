@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\vanov\Documents\GitHub\schoolJournal\Wpf журнал учащихся школы\App.xaml
-15623555871
+172053250417
 
-20297617014
+22-1143421758
 21-618982402
-MainWindow.xaml;UControl\UCCharts.xaml;UControl\UCClass.xaml;UControl\UCEmployee.xaml;UControl\UCLessons.xaml;UControl\UCLogs.xaml;UControl\UCStudent.xaml;UControl\UCStudentLogs.xaml;WAdd\WindowAddEmployee.xaml;WAdd\WindowAddRating.xaml;WAdd\WindowAddStudent.xaml;WEdit\WindowEditEmployee.xaml;WEdit\WindowEditRating.xaml;WEdit\WindowEditStudent.xaml;WindowLogin.xaml;
+MainUC\UCAdmin.xaml;MainUC\UCTeacher.xaml;MainWindow.xaml;UControl\UCCharts.xaml;UControl\UCClass.xaml;UControl\UCEmployee.xaml;UControl\UCLessons.xaml;UControl\UCLogs.xaml;UControl\UCStudent.xaml;UControl\UCStudentLogs.xaml;WAdd\WindowAddEmployee.xaml;WAdd\WindowAddRating.xaml;WAdd\WindowAddStudent.xaml;WEdit\WindowEditEmployee.xaml;WEdit\WindowEditRating.xaml;WEdit\WindowEditStudent.xaml;WindowLogin.xaml;
 
 False
 
