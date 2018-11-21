@@ -46,7 +46,6 @@ namespace Wpf_журнал_учащихся_школы.WAdd
         }
         private void AddBN_Click(object sender, RoutedEventArgs e)
         {
-
             try
             {
                 DataSet User = new DataSet();
@@ -59,9 +58,9 @@ namespace Wpf_журнал_учащихся_школы.WAdd
                     WorkWithBD.inputLogs(sql, DayB.Text, idfio, MainWindow.SubjectID, ((MissedChB.IsChecked == true) ? "н" : ""), RatingCB.Text); //короткая запись сделать
 
                 Close();
-        }
+            }
             catch { MessageBox.Show("Введите корректные данные"); }
-}
+        }
 
         private void CancelBN_Click(object sender, RoutedEventArgs e)
         {

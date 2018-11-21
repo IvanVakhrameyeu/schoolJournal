@@ -37,11 +37,7 @@ namespace Wpf_журнал_учащихся_школы
         static public string StudentID;
         static public string NameGroup;
         static public string SubName;
-
-        //    <Label x:Name="TotalLB" FontSize="20" Height="50" Width="230" VerticalAlignment="Top" Margin="194,0,368,0"/>
-        //    <ComboBox x:Name="TotalCB" FontSize="20" Height="40" Width="350" VerticalAlignment="Top" HorizontalAlignment="Right" SelectionChanged="TotalCB_SelectionChanged"/>
-        
-
+               
         public static string Access = ""; // уровень доступа пользователя
         public DataRowView rows
         {
@@ -59,18 +55,6 @@ namespace Wpf_журнал_учащихся_школы
                 start();
             }
         }   
-        //private void TotalCB_SelectionChanged(object sender, SelectionChangedEventArgs e) // вывод в грид предметов, для студента
-        //{
-        //    //try
-        //    //{
-        //        ContentGrid.Children.Clear();
-        //        SubName = TotalCB.SelectedItem.ToString();
-
-        //        ContentGrid.Children.Add(new UCStudentLogs());
-        //    //}
-        //    //catch { }
-        //}
-        ////--------------------------------------------------
         private string[] _labels;
         public SeriesCollection SeriesCollection { get; set; }
         public string[] Labels
@@ -82,7 +66,7 @@ namespace Wpf_журнал_учащихся_школы
                // OnPropertyChanged("Labels");
             }
         }
-        private void createLiveCharts()
+        private void createLiveCharts()//create chart
         {
             SeriesCollection = new SeriesCollection
             {
@@ -112,8 +96,7 @@ namespace Wpf_журнал_учащихся_школы
                 DateTime.Now.AddDays(4).ToString("24.12"),
             };
         }
-        //----------------------------------------------------------------------------------------
-        private void start() // выбор уровня доступа, для пользователя
+        private void start() // select lvl access
         {
             switch (Access)
             {
@@ -124,7 +107,7 @@ namespace Wpf_журнал_учащихся_школы
                     AccessMiddle();
                     break;
                 case "Low":
-                  //  AccessLow();
+                    AccessLow();
                     break;
             }
         }
@@ -136,40 +119,9 @@ namespace Wpf_журнал_учащихся_школы
         {
             GridListVew.Children.Add(new UCTeacher());
         }
-        //private void AccessLow() // уровень доступа для учащихся\родителей
-        //{
-        //    MainListView.Visibility = Visibility.Collapsed;
-        //    DataSet User = new DataSet();
-            
-        //    string sql = "SELECT SubName FROM Lessons " +
-        //        "JOIN Subjects ON (Lessons.SubjectsID=Subjects.SubjectsID) " +
-        //        "WHERE Lessons.GroupNameID = " + GroupNameID + "";
-        //    User = WorkWithBD.outPutdb(sql).Tables[0].DataSet;
-
-        //    for (int i = 0; i < User.Tables[0].DefaultView.Count; i++)
-        //    {
-        //        TotalCB.Items.Add(User.Tables[0].DefaultView[i].Row[0].ToString());
-        //    }
-
-        //}
-        //public void SelecStudent() // вывод всех учащихся (возможно удалить комбо бокс) возможно взять из старой версии динамич загрузку данных
-        //{
-        //    TotalLB.Content = "Выберите Класс";
-        //    TotalCB.Items.Clear();
-
-        //    DataSet User = new DataSet();
-        //    string sql = "SELECT Name FROM GroupName";
-        //    User = WorkWithBD.outPutdb(sql).Tables[0].DataSet;
-
-        //    TotalCB.Items.Add("Все");
-        //    for (int i = 0; i < User.Tables[0].DefaultView.Count; i++)
-        //    {
-        //        TotalCB.Items.Add(User.Tables[0].DefaultView[i].Row[0].ToString());
-        //    }
-
-        //    ContentGrid.Children.Clear();
-        //    ContentGrid.Children.Add(new UCStudent());
-        //}
-        
+        private void AccessLow() // Load UserControl with access for Student or Parents(MainUC)
+        {
+            GridListVew.Children.Add(new MainUC.UCStudent());
+        }        
     }
 }

@@ -81,6 +81,9 @@
     <Compile Include="MainUC\UCAdmin.xaml.cs">
       <DependentUpon>UCAdmin.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MainUC\UCStudent.xaml.cs">
+      <DependentUpon>UCStudent.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainUC\UCTeacher.xaml.cs">
       <DependentUpon>UCTeacher.xaml</DependentUpon>
     </Compile>
@@ -128,6 +131,10 @@
     </Compile>
     <Compile Include="WorkWithBD.cs" />
     <Page Include="MainUC\UCAdmin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainUC\UCStudent.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
