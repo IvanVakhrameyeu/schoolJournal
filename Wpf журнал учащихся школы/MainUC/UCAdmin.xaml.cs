@@ -34,7 +34,7 @@ namespace Wpf_журнал_учащихся_школы.MainUC
         {
             InitializeComponent();
         }
-        private void MainListView_SelectionChanged(object sender, SelectionChangedEventArgs e) // обработчик события нажатия на ListView
+        private void MainListView_SelectionChanged(object sender, SelectionChangedEventArgs e) //change ListViewItem
         {
             switch (MainListView.SelectedIndex+1)
             {
@@ -54,9 +54,6 @@ namespace Wpf_журнал_учащихся_школы.MainUC
                     SelectChart();
                     break;
                 default:
-                   // MainWindow.NameGroup = MainListView.Items[MainListView.SelectedIndex].ToString();
-                    //ContentGrid.Children.Clear();
-                    //ContentGrid.Children.Add(new UCLogs());
                     break;
             }
         }
@@ -106,7 +103,7 @@ namespace Wpf_журнал_учащихся_школы.MainUC
         public void SelectStudent() // Load UserControl with Student
         {
             ContentGrid.Children.Clear();
-            ContentGrid.Children.Add(new UCStudent());
+            ContentGrid.Children.Add(new UControl.UCStudent());
         }
         private void AddBN_Click(object sender, RoutedEventArgs e) // add something
         {

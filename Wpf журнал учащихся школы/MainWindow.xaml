@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Wpf_журнал_учащихся_школы"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" MaxHeight="450" MaxWidth="800" MinHeight="450" MinWidth="800">
     
     <Grid>
         
@@ -38,6 +38,21 @@
             </Rectangle.Fill>
         </Rectangle>
         <Rectangle Fill="#FFCCEEFF" HorizontalAlignment="Left" Margin="180,0,0,0" Width="1"/>
-        <Grid x:Name="GridListVew"/>
+        <Grid x:Name="GridListVew">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <DataGrid FontFamily="Verdana" FontSize="11" ColumnHeaderHeight="0" IsReadOnly="True" AutoGenerateColumns="False"  x:Name="DataGridTotal" SelectionChanged="DataGridTotal_SelectionChanged" Background="{x:Null}"/>
+            <Path Data="M0,5.6875 L0,480" HorizontalAlignment="Left" Height="474.312" Margin="0,5.688,0,-29" Stretch="Fill" VerticalAlignment="Top" Width="0">
+                <Path.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black" Offset="0"/>
+                        <GradientStop Color="#0200A2FF" Offset="0.962"/>
+                        <GradientStop Color="#BE23AEFF"/>
+                        <GradientStop Color="#4A0DA6FF" Offset="0.197"/>
+                    </LinearGradientBrush>
+                </Path.Fill>
+            </Path>
+        </Grid>
     </Grid>
 </Window>

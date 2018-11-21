@@ -122,6 +122,11 @@ namespace Wpf_журнал_учащихся_школы
         private void AccessLow() // Load UserControl with access for Student or Parents(MainUC)
         {
             GridListVew.Children.Add(new MainUC.UCStudent());
-        }        
+        }
+
+        private void DataGridTotal_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }
