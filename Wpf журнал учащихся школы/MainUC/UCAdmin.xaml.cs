@@ -39,7 +39,7 @@ namespace Wpf_журнал_учащихся_школы.MainUC
             switch (MainListView.SelectedIndex+1)
             {
                 case 1:
-                    SelectStudent();
+                   SelectStudent();
                     break;
                 case 2:
                     SelectClass();

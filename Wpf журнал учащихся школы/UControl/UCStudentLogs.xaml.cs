@@ -30,14 +30,8 @@ namespace Wpf_журнал_учащихся_школы.UControl
 
         private void start() // проверить студента, у которого есть оценки
         {
-            DataSet User = new DataSet();
-         
-            string sql = "SELECT LogsID, FIO, Data, Missed, Rating, SubName " +
-               "FROM Logs " +
-               "JOIN Student ON Logs.StudentID = Student.StudentID " +
-               "JOIN Subjects ON Logs.SubjectsID = Subjects.SubjectsID " +
-               "WHERE SubName ='" + MainWindow.SubName + "' And Logs.StudentID = '" + MainWindow.StudentID + "' ";
-            
+            string sql = "SelectStudentLog @SubName='" + MainWindow.SubName + "',@StudentID="+ MainWindow.StudentID;        
+
             DataGridTotal.ItemsSource = (WorkWithBD.outPutdb(sql)).Tables[0].DefaultView;
         }
         private void DataGridTotal_SelectionChanged(object sender, SelectionChangedEventArgs e)

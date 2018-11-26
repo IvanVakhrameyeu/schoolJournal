@@ -18,16 +18,16 @@ namespace WPF_журнал_учащихся
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                connection.Open();
-                // Создаем объект DataAdapter (отправляет запрос на бд)
-                SqlDataAdapter adapter = new SqlDataAdapter(sql, connection);
-                // Создаем объект Dataset (представление о таблице)
-                DataSet ds = new DataSet();
-                // Заполняем Dataset
-                adapter.Fill(ds);
-                return ds;
+                    connection.Open();
+                    // Создаем объект DataAdapter (отправляет запрос на бд)
+                    SqlDataAdapter adapter = new SqlDataAdapter(sql, connection);
+                    // Создаем объект Dataset (представление о таблице)
+                    DataSet ds = new DataSet();
+                    // Заполняем Dataset
+                    adapter.Fill(ds);
+                    return ds;
             }
-        } 
+        }
         //------------------------ИЗМЕНЕНИЕ----------------
         public static void Update(string sql) // обновление изменений 
         {

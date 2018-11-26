@@ -34,12 +34,11 @@ namespace Wpf_журнал_учащихся_школы.UControl
             InitializeComponent();
             start();
         }
-        private void start()
+        private async void start()
         {
-            string sql = "SELECT GroupName.GroupNameID, GroupName.Name " +
-                        "FROM GroupName ";
+                string sql = "EXEC SelectAllClass";
 
-            DataGridTotal.ItemsSource = (WorkWithBD.outPutdb(sql)).Tables[0].DefaultView;
+                DataGridTotal.ItemsSource = (WorkWithBD.outPutdb(sql)).Tables[0].DefaultView;
         }
         
         private void DataGridTotal_SelectionChanged(object sender, SelectionChangedEventArgs e)

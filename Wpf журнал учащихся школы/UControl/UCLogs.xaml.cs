@@ -37,15 +37,10 @@ namespace Wpf_журнал_учащихся_школы.UControl
         }
         private void start() // тут чот не то (мб норм)
         {
-            DataSet User = new DataSet();
-            User = WorkWithBD.outPutdb("SELECT GroupNameID FROM GroupName WHERE Name = '" + MainWindow.NameGroup + "'").Tables[0].DataSet;
-            var groupid = User.Tables[0].DefaultView[0].Row[0].ToString();
-
-            string sql = "SELECT LogsID, FIO, Data, Missed, Rating " +
-               "FROM Logs " +
-               "JOIN Student ON Logs.StudentID = Student.StudentID " +
-               "WHERE SubjectsID ='"+ MainWindow.SubjectID + "' And GroupNameID = "+ groupid +" ";
-
+           // DataSet User = new DataSet();
+            //  WorkWithBD.outPutdb("SELECT GroupNameID FROM GroupName WHERE Name = '" + MainWindow.NameGroup + "'").Tables[0].DataSet;
+            
+            string sql = ("EXEC SelectLogs @NameGroup='" + MainWindow.NameGroup + "', @SubjectId=" + MainWindow.SubjectID);            
             DataGridTotal.ItemsSource = (WorkWithBD.outPutdb(sql)).Tables[0].DefaultView;
         }
 

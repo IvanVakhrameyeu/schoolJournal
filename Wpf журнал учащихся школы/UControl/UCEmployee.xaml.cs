@@ -36,8 +36,7 @@ namespace Wpf_журнал_учащихся_школы.UControl
         }
         private void start()
         {
-            string sql = "SELECT EmployeeID, FIOEmployee, Sex, DOB, Tel, Subjects.SubName  " +
-                "FROM Employee JOIN Subjects ON (Employee.SubjectsID = Subjects.SubjectsID)";
+            string sql = "EXEC SelectAllTeacher";
 
             DataGridTotal.ItemsSource = (WorkWithBD.outPutdb(sql)).Tables[0].DefaultView;
         }
