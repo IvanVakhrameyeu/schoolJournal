@@ -48,20 +48,15 @@ namespace Wpf_журнал_учащихся_школы.WAdd
         {
             try
             {
-                DataSet User = new DataSet();
-                User = WorkWithBD.outPutdb("SELECT StudentID FROM Student WHERE FIO ='" + (FIOCB.SelectedItem).ToString() + "'").Tables[0].DataSet;
-
-                string idfio = (User.Tables[0].DefaultView[0].Row[0].ToString());
-                string sql = "INSERT INTO Logs (Data , StudentID, SubjectsID, Missed, Rating) " +
-           "VALUES (@Data, @StudentID, @SubjectsID, @Missed, @Rating)";
-                
-                    WorkWithBD.inputLogs(sql, DayB.Text, idfio, MainWindow.SubjectID, ((MissedChB.IsChecked == true) ? "н" : ""), RatingCB.Text); //короткая запись сделать
-
+                MessageBox.Show((FIOCB.SelectedItem).ToString());
+                string sql = "EXEC InsertRating " +             
+                    "@Data='"+ Convert.ToDateTime(DayB.Text) +"', @SubjectsID="+ MainWindow.SubjectID+", " +
+                    "@Missed='"+ ((MissedChB.IsChecked == true) ? "н" : "") + "', @Rating=" + RatingCB.Text + ", @FIO='"+ (FIOCB.SelectedItem).ToString() + "'";
+                WorkWithBD.outPutdb(sql);
                 Close();
             }
             catch { MessageBox.Show("Введите корректные данные"); }
         }
-
         private void CancelBN_Click(object sender, RoutedEventArgs e)
         {
             Close();

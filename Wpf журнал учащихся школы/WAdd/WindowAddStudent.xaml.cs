@@ -68,16 +68,15 @@ namespace Wpf_журнал_учащихся_школы.WAdd
         {
             try
             {
-                DataSet dataSet = new DataSet();
-                string sql = "INSERT INTO Student (GroupNameID, MedGroupID, FIO, Sex, DOB, Tel) " +
-           "VALUES (@GroupNameID ,@MedGroupID, @FIO, @Sex, @DOB, @Tel)";
-
-                WorkWithBD.inputStudent(sql, (ClassCB.SelectedIndex + 1).ToString(), (MedGroupCB.SelectedIndex + 1).ToString(), FIOTB.Text, SexCB.SelectedItem.ToString(), DayB.Text, TelTB.Text);
-
+                string sql = "EXEC InsertStudent " +
+               "@GroupNameID=" + (ClassCB.SelectedIndex + 1).ToString() + " ,@MedGroupID="+ (MedGroupCB.SelectedIndex+1) +",@FIO='" + FIOTB.Text + "', " +
+               "@Sex='" + SexCB.SelectedItem.ToString() + "', @DOB='" + Convert.ToDateTime(DayB.Text) + "'," +
+               "@Tel='" + TelTB.Text + "'";
+                WorkWithBD.outPutdb(sql);
                 Close();
-            }
-            catch { MessageBox.Show("Введите корректные данные"); }
         }
+            catch { MessageBox.Show("Введите корректные данные"); }
+}
 
         private void CancelBN_Click(object sender, RoutedEventArgs e)
         {

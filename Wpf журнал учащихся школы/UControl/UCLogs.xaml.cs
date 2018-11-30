@@ -35,11 +35,8 @@ namespace Wpf_журнал_учащихся_школы.UControl
             InitializeComponent();
             start();
         }
-        private void start() // тут чот не то (мб норм)
-        {
-           // DataSet User = new DataSet();
-            //  WorkWithBD.outPutdb("SELECT GroupNameID FROM GroupName WHERE Name = '" + MainWindow.NameGroup + "'").Tables[0].DataSet;
-            
+        private void start() 
+        {            
             string sql = ("EXEC SelectLogs @NameGroup='" + MainWindow.NameGroup + "', @SubjectId=" + MainWindow.SubjectID);            
             DataGridTotal.ItemsSource = (WorkWithBD.outPutdb(sql)).Tables[0].DefaultView;
         }

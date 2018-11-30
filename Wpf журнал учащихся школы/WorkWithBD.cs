@@ -2,10 +2,6 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace WPF_журнал_учащихся
 {
     public class WorkWithBD
@@ -40,58 +36,7 @@ namespace WPF_журнал_учащихся
                     read.Close();
                 }
             }
-        }
-        //--------------------ДОБАВЛЕНИЕ---------------------
-        public static void inputStudent(string sql, string GroupNameID, string MedGroupID, string FIOTB, string Sex, string DayB, string Tel)
-        {
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                connection.Open();
-                using (var cmd = new SqlCommand(sql, connection))
-                {
-                    cmd.Parameters.AddWithValue("@GroupNameID", GroupNameID);
-                    cmd.Parameters.AddWithValue("@MedGroupID", MedGroupID);
-                    cmd.Parameters.AddWithValue("@FIO", FIOTB);
-                    cmd.Parameters.AddWithValue("@Sex", Sex);
-                    cmd.Parameters.AddWithValue("@DOB", Convert.ToDateTime(DayB));
-                    cmd.Parameters.AddWithValue("@Tel", Tel);
-                    cmd.ExecuteNonQuery();
-                }
-            }
-        }
-        public static void inputEmployee(string sql, string SubjectsID, string FIOTB, string Sex, string DayB, string Tel)
-        {
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                connection.Open();
-                using (var cmd = new SqlCommand(sql, connection))
-                {
-                    cmd.Parameters.AddWithValue("@SubjectsID", SubjectsID);
-                    cmd.Parameters.AddWithValue("@FIOEmployee", FIOTB);
-                    cmd.Parameters.AddWithValue("@Sex", Sex);
-                    cmd.Parameters.AddWithValue("@DOB", Convert.ToDateTime(DayB));
-                    cmd.Parameters.AddWithValue("@Tel", Tel);
-                    cmd.ExecuteNonQuery();
-                }
-            }
-        }
-        public static void inputLogs(string sql, string DayB, string StudentID, string SubjectsID, string Missed, string Rating)
-        {
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                connection.Open();
-                using (var cmd = new SqlCommand(sql, connection))
-                {
-                    cmd.Parameters.AddWithValue("@Data", Convert.ToDateTime(DayB));
-                    cmd.Parameters.AddWithValue("@StudentID", StudentID);
-                    cmd.Parameters.AddWithValue("@SubjectsID ", SubjectsID);
-                    cmd.Parameters.AddWithValue("@Missed", Missed);
-                    cmd.Parameters.AddWithValue("@Rating", Rating);
-                    cmd.ExecuteNonQuery();
-                }
-            }
-        }
-
+        }    
         //-------------------УДАЛЕНИЕ-----------------------
         public static void removeRegistrationdb(int index) // удаление из бд
         {
