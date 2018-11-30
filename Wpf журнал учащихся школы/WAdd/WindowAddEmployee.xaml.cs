@@ -32,7 +32,7 @@ namespace Wpf_журнал_учащихся_школы.WAdd
             SexCB.Items.Add("Ж");
 
             DataSet User = new DataSet();
-            string sql = "SELECT SubName FROM Subjects";
+            string sql = "EXEC SelectAllSubject";
             User = WorkWithBD.outPutdb(sql).Tables[0].DataSet;
 
             for (int i = 0; i < User.Tables[0].DefaultView.Count; i++)
@@ -49,11 +49,11 @@ namespace Wpf_журнал_учащихся_школы.WAdd
         {
             try
             {
-                DataSet dataSet = new DataSet();
-                string sql = "INSERT INTO Employee (SubjectsID, FIOEmployee, Sex, DOB, Tel) " +
-           "VALUES (@SubjectsID, @FIOEmployee, @Sex, @DOB, @Tel)";
-
-                WorkWithBD.inputEmployee(sql, (SubjectCB.SelectedIndex + 1).ToString(), FIOTB.Text, SexCB.SelectedItem.ToString(), DayB.Text, TelTB.Text);
+                string sql = "EXEC InsertEmployee " +
+                "@SubjectsID=" + (SubjectCB.SelectedIndex + 1).ToString() + " ,@FIOEmployee='"+ FIOTB.Text + "', " +
+                "@Sex='"+ SexCB.SelectedItem.ToString()+ "', @DOB='"+ Convert.ToDateTime(DayB.Text) + "'," +
+                "@Tel='"+ TelTB.Text + "'";
+                WorkWithBD.outPutdb(sql);
 
                 Close();
             }

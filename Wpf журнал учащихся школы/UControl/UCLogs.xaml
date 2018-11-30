@@ -13,6 +13,7 @@
                 <DataGridTextColumn Header="Дата оценки"  Binding="{Binding Data, StringFormat=\{0:dd.MM.yy\}}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Присутствие"  Binding="{Binding Missed }"></DataGridTextColumn>
                 <DataGridTextColumn Header="Оценка"  Binding="{Binding Rating}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Комментарий"  Binding="{Binding Comment}"></DataGridTextColumn>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>
