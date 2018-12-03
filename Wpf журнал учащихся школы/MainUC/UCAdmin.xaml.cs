@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WPF_журнал_учащихся;
 using Wpf_журнал_учащихся_школы.UControl;
 using Wpf_журнал_учащихся_школы.WAdd;
 
@@ -168,7 +169,22 @@ namespace Wpf_журнал_учащихся_школы.MainUC
         }
         private void DelBN_Click(object sender, RoutedEventArgs e) // delete something
         {
-
+            try
+            {
+                switch (MainListView.SelectedIndex + 1)
+                {
+                    case 1:
+                        string sql = ("EXEC DeleteStudent @StudentID=" + UControl.UCStudent.index);
+                        WorkWithBD.outPutdb(sql);
+                        ContentGrid.Children.Clear();
+                        ContentGrid.Children.Add(new UControl.UCStudent());
+                        refreshGrid();
+                        break;
+                    default:
+                        break;
+                }
+            }
+            catch { }
         }
     }
 }

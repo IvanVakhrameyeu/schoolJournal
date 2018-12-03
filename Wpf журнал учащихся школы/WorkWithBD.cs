@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
+﻿using System.Data;
 using System.Data.SqlClient;
 namespace WPF_журнал_учащихся
 {
@@ -37,89 +35,5 @@ namespace WPF_журнал_учащихся
                 }
             }
         }    
-        //-------------------УДАЛЕНИЕ-----------------------
-        public static void removeRegistrationdb(int index) // удаление из бд
-        {
-            removeServiceListdb(index);
-            using (SqlConnection sqlConn = new SqlConnection(connectionString))
-            {
-                using (SqlCommand cmd = new SqlCommand("DELETE FROM [Registration] WHERE [RegistrationID] = " + index, sqlConn))
-                {
-                    sqlConn.Open();
-                    cmd.CommandType = CommandType.Text;
-                    cmd.ExecuteNonQuery();
-                }
-            }
-        }
-        public static void removeClientdb(int index) // удаление из бд клиента
-        {
-            string sql = "SELECT RegistrationID FROM Registration WHERE Registration.ClientID=" + index + "";
-
-            List<int> list = new List<int>();
-            for (int i = 0; i < Convert.ToInt32(WorkWithBD.outPutdb(sql).Tables[0].Rows.Count); i++)
-            {
-                list.Add(Convert.ToInt32(WorkWithBD.outPutdb(sql).Tables[0].DefaultView[i].Row[0].ToString()));
-            }
-            for (int i = 0; i < list.Count; i++)
-            {
-                removeServiceListdb(list[i]);
-                removeRegistrationdb(list[i]);
-            }
-
-            using (SqlConnection sqlConn = new SqlConnection(connectionString))
-            {
-                using (SqlCommand cmd = new SqlCommand("DELETE FROM [Client] WHERE [ClientID] = " + index, sqlConn))
-                {
-                    sqlConn.Open();
-                    cmd.CommandType = CommandType.Text;
-                    cmd.ExecuteNonQuery();
-                }
-            }
-            using (SqlConnection sqlConn = new SqlConnection(connectionString))
-            {
-                using (SqlCommand cmd = new SqlCommand("DELETE FROM [Document] WHERE [DocumentID] = " + index, sqlConn))
-                {
-                    sqlConn.Open();
-                    cmd.CommandType = CommandType.Text;
-                    cmd.ExecuteNonQuery();
-                }
-            }
-        }
-        public static void removeServicedb(int index)
-        {
-            using (SqlConnection sqlConn = new SqlConnection(connectionString))
-            {
-                using (SqlCommand cmd = new SqlCommand("DELETE FROM [Service] WHERE [ServiceID] = " + index, sqlConn))
-                {
-                    sqlConn.Open();
-                    cmd.CommandType = CommandType.Text;
-                    cmd.ExecuteNonQuery();
-                }
-            }
-        }
-        public static void removeServiceListdb(int index)
-        {
-            using (SqlConnection sqlConn = new SqlConnection(connectionString))
-            {
-                using (SqlCommand cmd = new SqlCommand("DELETE FROM [ServiceList] WHERE [RegistrationID] = " + index, sqlConn))
-                {
-                    sqlConn.Open();
-                    cmd.CommandType = CommandType.Text;
-                    cmd.ExecuteNonQuery();
-                }
-            }
-        }
-        public static void removeServiceListGooddb(int index)
-        {
-            using (SqlConnection sqlConn = new SqlConnection(connectionString))
-            {
-                using (SqlCommand cmd = new SqlCommand("DELETE FROM [ServiceList] WHERE [ServiceListID] = " + index, sqlConn))
-                {
-                    sqlConn.Open();
-                    cmd.CommandType = CommandType.Text;
-                    cmd.ExecuteNonQuery();
-                }
-            }
-        }
     }
 }

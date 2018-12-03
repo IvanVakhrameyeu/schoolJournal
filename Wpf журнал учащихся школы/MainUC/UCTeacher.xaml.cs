@@ -93,7 +93,17 @@ namespace Wpf_журнал_учащихся_школы.MainUC
         }
         private void DelBN_Click(object sender, RoutedEventArgs e) // delete something
         {
-
+            try
+            {
+                if ((MainListView?.Items?[MainListView.SelectedIndex].ToString() ?? "") != "")
+                {
+                    string sql = ("EXEC DeleteRating @LogsID=" + UCLogs.index);
+                    WorkWithBD.outPutdb(sql);
+                    ContentGrid.Children.Clear();
+                    ContentGrid.Children.Add(new UCLogs());
+                }
+            }
+            catch { }
         }
     }
 }
