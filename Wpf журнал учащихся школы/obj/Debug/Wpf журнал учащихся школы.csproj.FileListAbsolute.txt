@@ -136,3 +136,7 @@ C:\Users\vanov\Documents\GitHub\schoolJournal\Wpf журнал учащихся 
 C:\Users\vanov\Documents\GitHub\schoolJournal\Wpf журнал учащихся школы\obj\Debug\MainUC\UCStudent.g.cs
 C:\Users\vanov\Documents\GitHub\schoolJournal\Wpf журнал учащихся школы\obj\Debug\MainUC\UCStudent.baml
 C:\Users\vanov\Documents\GitHub\schoolJournal\Wpf журнал учащихся школы\obj\Debug\Wpf журнал учащихся школы.csprojAssemblyReference.cache
+C:\Users\vanov\Documents\GitHub\schoolJournal\Wpf журнал учащихся школы\obj\Debug\Reports\WReportClass.g.cs
+C:\Users\vanov\Documents\GitHub\schoolJournal\Wpf журнал учащихся школы\obj\Debug\UControl\UCReportsTeacher.g.cs
+C:\Users\vanov\Documents\GitHub\schoolJournal\Wpf журнал учащихся школы\obj\Debug\Reports\WReportClass.baml
+C:\Users\vanov\Documents\GitHub\schoolJournal\Wpf журнал учащихся школы\obj\Debug\UControl\UCReportsTeacher.baml

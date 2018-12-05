@@ -48,7 +48,6 @@ namespace Wpf_журнал_учащихся_школы.WAdd
         {
             try
             {
-                MessageBox.Show((FIOCB.SelectedItem).ToString());
                 string sql = "EXEC InsertRating " +             
                     "@Data='"+ Convert.ToDateTime(DayB.Text) +"', @SubjectsID="+ MainWindow.SubjectID+", " +
                     "@Missed='"+ ((MissedChB.IsChecked == true) ? "н" : "") + "', @Rating=" + RatingCB.Text + ", @FIO='"+ (FIOCB.SelectedItem).ToString() + "'";

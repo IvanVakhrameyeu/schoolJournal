@@ -32,14 +32,14 @@ namespace Wpf_журнал_учащихся_школы.WAdd
             SexCB.Items.Add("Ж");
 
             DataSet User = new DataSet();
-            string sql = "SELECT Name FROM GroupName";
+            string sql = "EXEC SelectAllClass";
             User = WorkWithBD.outPutdb(sql).Tables[0].DataSet;
 
             for (int i = 0; i < User.Tables[0].DefaultView.Count; i++)
             {
-                ClassCB.Items.Add(User.Tables[0].DefaultView[i].Row[0].ToString());
+                ClassCB.Items.Add(User.Tables[0].DefaultView[i].Row[1].ToString());
             }
-            sql = "SELECT MedName FROM MedGroup";
+            sql = "EXEC SelectAllMedGroup";
             User = WorkWithBD.outPutdb(sql).Tables[0].DataSet;
 
             for (int i = 0; i < User.Tables[0].DefaultView.Count; i++)

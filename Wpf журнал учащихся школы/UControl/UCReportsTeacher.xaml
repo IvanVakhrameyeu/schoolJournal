@@ -1,0 +1,14 @@
+﻿<UserControl x:Class="Wpf_журнал_учащихся_школы.UControl.UCReportsTeacher"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Wpf_журнал_учащихся_школы.UControl"
+             mc:Ignorable="d" 
+             d:DesignHeight="250" d:DesignWidth="600">
+    <Grid>
+        <Grid>
+            <Button Content="Успеваемость по классу" Margin="144,164,190,136" Height="50"  Width="166" x:Name="ReportClass" Click="ReportClass_Click" HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalAlignment="Center" Background="#FF50B2E2" BorderBrush="#FF50B2E2" FontFamily="Verdana" />
+        </Grid>
+    </Grid>
+</UserControl>

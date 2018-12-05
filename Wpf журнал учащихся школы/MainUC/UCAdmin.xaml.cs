@@ -54,6 +54,9 @@ namespace Wpf_журнал_учащихся_школы.MainUC
                 case 5:
                     SelectChart();
                     break;
+                case 6:
+                    //SelectChart();
+                    break;
                 default:
                     break;
             }
@@ -81,17 +84,17 @@ namespace Wpf_журнал_учащихся_школы.MainUC
                     break;
             }
         }
-        public void SelectLesson() // Load UserControl with Subjects
+        private void SelectLesson() // Load UserControl with Subjects
         {
             ContentGrid.Children.Clear();
             ContentGrid.Children.Add(new UCLessons());
         }
-        public void SelectClass() // Load UserControl with Name class
+        private void SelectClass() // Load UserControl with Name class
         {
             ContentGrid.Children.Clear();
             ContentGrid.Children.Add(new UCClass());
         }
-        public void SelectEmployee() // LOad UserControl with Teacher
+        private void SelectEmployee() // LOad UserControl with Teacher
         {
             ContentGrid.Children.Clear();
             ContentGrid.Children.Add(new UCEmployee());
@@ -101,10 +104,14 @@ namespace Wpf_журнал_учащихся_школы.MainUC
             ContentGrid.Children.Clear();
             ContentGrid.Children.Add(new UCCharts());
         }
-        public void SelectStudent() // Load UserControl with Student
+        private void SelectStudent() // Load UserControl with Student
         {
             ContentGrid.Children.Clear();
             ContentGrid.Children.Add(new UControl.UCStudent());
+        }
+        private void SelectReport() // Load UserControl with Reports for Admin
+        {
+
         }
         private void AddBN_Click(object sender, RoutedEventArgs e) // add something
         {

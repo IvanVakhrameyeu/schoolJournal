@@ -34,7 +34,7 @@ namespace Wpf_журнал_учащихся_школы.UControl
             InitializeComponent();
             start();
         }
-        private async void start()
+        private void start()
         {
                 string sql = "EXEC SelectAllClass";
 

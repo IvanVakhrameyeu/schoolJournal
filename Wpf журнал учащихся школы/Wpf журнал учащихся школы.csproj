@@ -40,6 +40,10 @@
     <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
       <HintPath>..\packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Word.15.0.4797.1003\lib\net20\Microsoft.Office.Interop.Word.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -87,6 +91,9 @@
     <Compile Include="MainUC\UCTeacher.xaml.cs">
       <DependentUpon>UCTeacher.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Reports\WReportClass.xaml.cs">
+      <DependentUpon>WReportClass.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UControl\UCCharts.xaml.cs">
       <DependentUpon>UCCharts.xaml</DependentUpon>
     </Compile>
@@ -101,6 +108,9 @@
     </Compile>
     <Compile Include="UControl\UCLogs.xaml.cs">
       <DependentUpon>UCLogs.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UControl\UCReportsTeacher.xaml.cs">
+      <DependentUpon>UCReportsTeacher.xaml</DependentUpon>
     </Compile>
     <Compile Include="UControl\UCStudent.xaml.cs">
       <DependentUpon>UCStudent.xaml</DependentUpon>
@@ -130,6 +140,7 @@
       <DependentUpon>WindowLogin.xaml</DependentUpon>
     </Compile>
     <Compile Include="WorkWithBD.cs" />
+    <Compile Include="WorkWithWord.cs" />
     <Page Include="MainUC\UCAdmin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -154,6 +165,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Reports\WReportClass.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UControl\UCCharts.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -171,6 +186,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UControl\UCLogs.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UControl\UCReportsTeacher.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
