@@ -4,6 +4,7 @@ using LiveCharts.Wpf;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -128,5 +129,20 @@ namespace Wpf_журнал_учащихся_школы
         {
 
         }
+
+        /*
+         *  private void Grid_KeyDown(object sender, KeyEventArgs e)
+         {
+             MessageBox.Show(e.Key.ToString());
+             if (e.Key == Key.F1)
+             {
+                 try
+                 {
+                     Process.Start("Help.chm");
+                 }
+                 catch { MessageBox.Show("Справка не найдена"); }
+             }
+         }
+         * */
     }
 }
