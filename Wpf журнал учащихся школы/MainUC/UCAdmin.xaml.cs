@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -57,9 +58,20 @@ namespace Wpf_журнал_учащихся_школы.MainUC
                 case 6:
                     //SelectChart();
                     break;
+                case 7:
+                    SelectHelp();
+                    break;
                 default:
                     break;
             }
+        }
+       static public void SelectHelp()
+        {
+            try
+            {
+                Process.Start("Help.chm");
+            }
+            catch { MessageBox.Show("Справка не найдена"); }
         }
         private void refreshGrid() // обновление грида, после нажатий различных кнопок
         {

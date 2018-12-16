@@ -66,6 +66,11 @@ namespace Wpf_журнал_учащихся_школы.MainUC
                     ContentGrid.Children.Add(new UCReportsTeacher());
                 }
                 else
+                if (MainListView.SelectedIndex + 1 == 2)
+                {
+                    UCAdmin.SelectHelp();
+                }
+                else
                 {
                     AddBN.Visibility = Visibility.Visible;
                     EditBN.Visibility = Visibility.Visible;

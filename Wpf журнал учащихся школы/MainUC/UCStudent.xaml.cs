@@ -53,9 +53,16 @@ namespace Wpf_журнал_учащихся_школы.MainUC
         {
             if ((MainListView?.Items?[MainListView.SelectedIndex].ToString() ?? "") != "")
             {
-                MainWindow.SubName = ((TextBlock)MainListView.Items[MainListView.SelectedIndex]).Text;
-                ContentGrid.Children.Clear();
-                ContentGrid.Children.Add(new UCStudentLogs());
+                if (MainListView.SelectedIndex + 1 == 1)
+                {
+                    UCAdmin.SelectHelp();
+                }
+                else
+                {
+                    MainWindow.SubName = ((TextBlock)MainListView.Items[MainListView.SelectedIndex]).Text;
+                    ContentGrid.Children.Clear();
+                    ContentGrid.Children.Add(new UCStudentLogs());
+                }
             }
         }
     }
