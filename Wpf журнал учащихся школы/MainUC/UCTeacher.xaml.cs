@@ -33,14 +33,14 @@ namespace Wpf_журнал_учащихся_школы.MainUC
         {
 
             DataSet User = new DataSet();
-            string sql = "SELECT Name FROM GroupName";
+            string sql = "EXEC SelectAllClass";
             User = WorkWithBD.outPutdb(sql).Tables[0].DataSet;
 
             for (int i = 0; i < User.Tables[0].DefaultView.Count; i++)
             {
                 MainListView.Items.Add(new TextBlock()
                 {
-                    Text = User.Tables[0].DefaultView[i].Row[0].ToString(),
+                    Text = User.Tables[0].DefaultView[i].Row[1].ToString(),
                     VerticalAlignment = VerticalAlignment.Center,
                     Height = 60,
                     FontSize = 16,
@@ -57,10 +57,29 @@ namespace Wpf_журнал_учащихся_школы.MainUC
         {
             if ((MainListView?.Items?[MainListView.SelectedIndex].ToString()?? "") !="")
             {
-                MainWindow.NameGroup = ((TextBlock)MainListView.Items[MainListView.SelectedIndex]).Text;
-                ContentGrid.Children.Clear();
-                ContentGrid.Children.Add(new UCLogs());
-            }            
+                if(MainListView.SelectedIndex + 1==1)
+                {
+                    AddBN.Visibility = Visibility.Collapsed;
+                    EditBN.Visibility = Visibility.Collapsed;
+                    DelBN.Visibility = Visibility.Collapsed;
+                    ContentGrid.Children.Clear();
+                    ContentGrid.Children.Add(new UCReportsTeacher());
+                }
+                else
+                if (MainListView.SelectedIndex + 1 == 2)
+                {
+                    UCAdmin.SelectHelp();
+                }
+                else
+                {
+                    AddBN.Visibility = Visibility.Visible;
+                    EditBN.Visibility = Visibility.Visible;
+                    DelBN.Visibility = Visibility.Visible;
+                    MainWindow.NameGroup = ((TextBlock)MainListView.Items[MainListView.SelectedIndex]).Text;
+                    ContentGrid.Children.Clear();
+                    ContentGrid.Children.Add(new UCLogs());
+                }
+            }
         }
         private void AddBN_Click(object sender, RoutedEventArgs e) // add something
         {
@@ -93,7 +112,17 @@ namespace Wpf_журнал_учащихся_школы.MainUC
         }
         private void DelBN_Click(object sender, RoutedEventArgs e) // delete something
         {
-
+            try
+            {
+                if ((MainListView?.Items?[MainListView.SelectedIndex].ToString() ?? "") != "")
+                {
+                    string sql = ("EXEC DeleteRating @LogsID=" + UCLogs.index);
+                    WorkWithBD.outPutdb(sql);
+                    ContentGrid.Children.Clear();
+                    ContentGrid.Children.Add(new UCLogs());
+                }
+            }
+            catch { }
         }
     }
 }

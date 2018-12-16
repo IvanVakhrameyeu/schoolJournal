@@ -45,7 +45,7 @@ namespace Wpf_журнал_учащихся_школы.UControl
         private void addSubjects() // добавление предметов в комбо бокс
         {
             DataSet User = new DataSet();
-            string sql = "SELECT SubName FROM Subjects";
+            string sql = "EXEC SelectAllSubject";
             User = WorkWithBD.outPutdb(sql).Tables[0].DataSet;
             //SubjectCB.Items.Add("Все"); 
             for (int i = 0; i < User.Tables[0].DefaultView.Count; i++)

@@ -74,8 +74,8 @@ namespace Wpf_журнал_учащихся_школы
                     "[DOB] = '" + Convert.ToDateTime(DayB.Text) + "', " +
                     "[Tel] = '" + TelTB.Text + "' " +
                     "WHERE [StudentID] = " + UCStudent.index;
-
-                WorkWithBD.Update(sql);
+           
+                 WorkWithBD.Update(sql);
 
                 Close();
             }

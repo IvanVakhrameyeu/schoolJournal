@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WPF_журнал_учащихся;
 using Wpf_журнал_учащихся_школы.UControl;
 using Wpf_журнал_учащихся_школы.WAdd;
 
@@ -53,9 +55,23 @@ namespace Wpf_журнал_учащихся_школы.MainUC
                 case 5:
                     SelectChart();
                     break;
+                case 6:
+                    //SelectChart();
+                    break;
+                case 7:
+                    SelectHelp();
+                    break;
                 default:
                     break;
             }
+        }
+       static public void SelectHelp()
+        {
+            try
+            {
+                Process.Start("Help.chm");
+            }
+            catch { MessageBox.Show("Справка не найдена"); }
         }
         private void refreshGrid() // обновление грида, после нажатий различных кнопок
         {
@@ -80,17 +96,17 @@ namespace Wpf_журнал_учащихся_школы.MainUC
                     break;
             }
         }
-        public void SelectLesson() // Load UserControl with Subjects
+        private void SelectLesson() // Load UserControl with Subjects
         {
             ContentGrid.Children.Clear();
             ContentGrid.Children.Add(new UCLessons());
         }
-        public void SelectClass() // Load UserControl with Name class
+        private void SelectClass() // Load UserControl with Name class
         {
             ContentGrid.Children.Clear();
             ContentGrid.Children.Add(new UCClass());
         }
-        public void SelectEmployee() // LOad UserControl with Teacher
+        private void SelectEmployee() // LOad UserControl with Teacher
         {
             ContentGrid.Children.Clear();
             ContentGrid.Children.Add(new UCEmployee());
@@ -100,10 +116,14 @@ namespace Wpf_журнал_учащихся_школы.MainUC
             ContentGrid.Children.Clear();
             ContentGrid.Children.Add(new UCCharts());
         }
-        public void SelectStudent() // Load UserControl with Student
+        private void SelectStudent() // Load UserControl with Student
         {
             ContentGrid.Children.Clear();
             ContentGrid.Children.Add(new UControl.UCStudent());
+        }
+        private void SelectReport() // Load UserControl with Reports for Admin
+        {
+
         }
         private void AddBN_Click(object sender, RoutedEventArgs e) // add something
         {
@@ -168,7 +188,22 @@ namespace Wpf_журнал_учащихся_школы.MainUC
         }
         private void DelBN_Click(object sender, RoutedEventArgs e) // delete something
         {
-
+            try
+            {
+                switch (MainListView.SelectedIndex + 1)
+                {
+                    case 1:
+                        string sql = ("EXEC DeleteStudent @StudentID=" + UControl.UCStudent.index);
+                        WorkWithBD.outPutdb(sql);
+                        ContentGrid.Children.Clear();
+                        ContentGrid.Children.Add(new UControl.UCStudent());
+                        refreshGrid();
+                        break;
+                    default:
+                        break;
+                }
+            }
+            catch { }
         }
     }
 }

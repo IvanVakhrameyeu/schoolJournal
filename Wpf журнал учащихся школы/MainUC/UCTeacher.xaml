@@ -28,6 +28,18 @@
                        SelectionChanged="MainListView_SelectionChanged"
                         Foreground="Black" 
                         BorderBrush="Black">
+                <ListViewItem  Foreground="#FF0A3D52" Height="50" Width="180">
+                    <StackPanel Orientation="Horizontal" Width="170">
+                        <Image Height="34" Stretch="Fill" Width="34"/>
+                        <TextBlock Margin="-3 0 0 0" VerticalAlignment="Center" Text="Отчеты" FontFamily="Verdana"/>
+                    </StackPanel>
+                </ListViewItem>
+                <ListViewItem  Foreground="#FF0A3D52" Height="50" Width="180">
+                    <StackPanel Orientation="Horizontal" Width="170">
+                        <Image Height="34" Stretch="Fill" Width="34"/>
+                        <TextBlock Margin="-3 0 0 0" VerticalAlignment="Center" Text="Справка" FontFamily="Verdana"/>
+                    </StackPanel>
+                </ListViewItem>
             </ListView>
         </Grid>
         <Grid>
