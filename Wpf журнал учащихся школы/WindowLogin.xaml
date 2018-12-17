@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Wpf_журнал_учащихся_школы"
+
         mc:Ignorable="d"
         Title="Авторизация" Height="171.008"  Width="567" MaxHeight="171.008" MaxWidth="567" MinHeight="111.008"  MinWidth="567">
     <Grid>

@@ -70,8 +70,9 @@
                         <TextBlock Margin="-3 0 0 0" VerticalAlignment="Center" Text="Справка" FontFamily="Verdana"/>
                     </StackPanel>
                 </ListViewItem>
+                
             </ListView>
-        </Grid>       
+           </Grid>       
         <Grid>
             <Button Content="Добавить" Margin="276,0,416,0" Height="30"  Width="100" x:Name="AddBN" Click="AddBN_Click" HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalAlignment="Bottom" Background="#FF50B2E2" BorderBrush="#FF50B2E2" FontFamily="Verdana" />
             <Button Content="Изменить" Margin="411,0,281,0" Height="30"  Width="100" x:Name="EditBN" Click="EditBN_Click" HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalAlignment="Bottom" Background="#FF50B2E2" BorderBrush="#FF50B2E2" FontFamily="Verdana"/>

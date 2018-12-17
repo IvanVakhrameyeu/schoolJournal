@@ -7,7 +7,11 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <DataGrid  FontFamily="Verdana" FontSize="11" ColumnHeaderHeight="49" IsReadOnly="True" AutoGenerateColumns="False"  Name="DataGridTotal" SelectionChanged="DataGridTotal_SelectionChanged" Background="{x:Null}">
+        <TextBox FontSize="14" Margin="0,0,20.469,0" Height="26.48" Width="250" Name="SearchTB" Background="#FFFFFFCC" Foreground="Black" FontFamily="Verdana" BorderBrush="#7F000000" VerticalAlignment="Top"/>
+        <Button Name="SearchBN" Content="Поиск" FontSize="14" Height="26.48" Width="140" HorizontalAlignment="Right" Click="SearchBN_Click" Background="#FF50B2E2" BorderBrush="#FF50B2E2" FontFamily="Verdana" VerticalAlignment="Top"/>
+        <Button Name="MainBN" Content="Главная" FontSize="14" Height="26.48" Width="140" HorizontalAlignment="Left" Click="MainBN_Click" Background="#FF50B2E2" BorderBrush="#FF50B2E2" FontFamily="Verdana" VerticalAlignment="Top"/>
+
+        <DataGrid Margin="0,30,0,0" FontFamily="Verdana" FontSize="11" ColumnHeaderHeight="49" IsReadOnly="True" AutoGenerateColumns="False"  Name="DataGridTotal" SelectionChanged="DataGridTotal_SelectionChanged" Background="{x:Null}">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Предмет" Binding="{Binding SubName }" IsReadOnly="True"></DataGridTextColumn>
                 <DataGridTextColumn Header="ФИО" Binding="{Binding FIOEmployee}" IsReadOnly="True"></DataGridTextColumn>

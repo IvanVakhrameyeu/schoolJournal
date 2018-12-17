@@ -65,7 +65,7 @@ namespace Wpf_журнал_учащихся_школы.MainUC
                     break;
             }
         }
-       static public void SelectHelp()
+        static public void SelectHelp()
         {
             try
             {
@@ -73,6 +73,7 @@ namespace Wpf_журнал_учащихся_школы.MainUC
             }
             catch { MessageBox.Show("Справка не найдена"); }
         }
+
         private void refreshGrid() // обновление грида, после нажатий различных кнопок
         {
             switch (MainListView.SelectedIndex + 1)
@@ -205,5 +206,7 @@ namespace Wpf_журнал_учащихся_школы.MainUC
             }
             catch { }
         }
+
+       
     }
 }

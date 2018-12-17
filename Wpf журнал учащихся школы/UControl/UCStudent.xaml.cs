@@ -40,11 +40,32 @@ namespace Wpf_журнал_учащихся_школы.UControl
 
             DataGridTotal.ItemsSource = (WorkWithBD.outPutdb(sql)).Tables[0].DefaultView;
         }
+        private void SearchBN_Click(object sender, RoutedEventArgs e)
+        {
+                    string sql = "EXEC SelectAllStudent";
+
+                    DataView dt = new DataView();
+                    dt = (WorkWithBD.outPutdb(sql)).Tables[0].DefaultView;
+
+                    dt.RowFilter = "FIO like '%" + SearchTB.Text + "%'";
+                             
+                    DataGridTotal.ItemsSource= dt.Table.DefaultView;            
+        }
 
         private void DataGridTotal_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            row = DataGridTotal.SelectedItem as DataRowView;
-            index = Convert.ToInt32(row.Row.ItemArray[0]);
+            try
+            {
+                row = DataGridTotal.SelectedItem as DataRowView;
+                index = Convert.ToInt32(row.Row.ItemArray[0]);
+            }
+            catch (Exception ex)
+            { MessageBox.Show(ex.Message); }
+        }
+
+        private void MainBN_Click(object sender, RoutedEventArgs e)
+        {
+            start();
         }
     }
 }

@@ -4,8 +4,8 @@ namespace WPF_журнал_учащихся
 {
     public class WorkWithBD
     {
-        static string connectionString = //@"Data Source=.\SQLEXPRESS;Initial Catalog=schooldb;Integrated Security=True";
-         @"Data Source=(localdb)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|schooldb.mdf;Integrated Security=True;Connect Timeout=30;";
+        static string connectionString = @"Data Source=.\SQLEXPRESS;Initial Catalog=schooldb;Integrated Security=True";
+       //  @"Data Source=(localdb)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|schooldb.mdf;Integrated Security=True;Connect Timeout=30;";
 
         static DataSet ds = new DataSet();
         public static DataSet outPutdb(string sql) // вывод из бд

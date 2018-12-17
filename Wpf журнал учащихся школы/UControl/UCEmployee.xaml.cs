@@ -46,5 +46,20 @@ namespace Wpf_журнал_учащихся_школы.UControl
             row = DataGridTotal.SelectedItem as DataRowView;
             index = Convert.ToInt32(row.Row.ItemArray[0]);
         }
+        private void SearchBN_Click(object sender, RoutedEventArgs e)
+        {
+            string sql = "EXEC SelectAllTeacher";
+
+            DataView dt = new DataView();
+            dt = (WorkWithBD.outPutdb(sql)).Tables[0].DefaultView;
+
+            dt.RowFilter = "FIOEmployee like '%" + SearchTB.Text + "%'";
+
+            DataGridTotal.ItemsSource = dt.Table.DefaultView;
+        }
+        private void MainBN_Click(object sender, RoutedEventArgs e)
+        {
+            start();
+        }
     }
 }
