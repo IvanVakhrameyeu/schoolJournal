@@ -28,6 +28,7 @@ namespace Wpf_журнал_учащихся_школы.WAdd
         }
         private void start()
         {
+            DayB.Maximum = (DateTime.Today);
             for (int i = 1; i <= 10; i++)
                 RatingCB.Items.Add(i.ToString());
 

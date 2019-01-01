@@ -20,7 +20,7 @@
             <Label FontSize="15"   Margin="20.031,185.468,358.969,0" Content="Дата рождения" Height="26.48" FontFamily="Verdana" VerticalAlignment="Top"/>
             <xctk:DateTimePicker  FontSize="15" Margin="219.281,185.398,20.469,0" Format="LongDate" Name="DayB" Background="#FFFFFFCC" FontFamily="Verdana" Height="26.48" Foreground="Black" VerticalAlignment="Top" BorderBrush="{x:Null}"/>
             <Label FontSize="15"  Margin="20.031,224.107,358.969,0" Content="Номер телефона" Height="26.48" FontFamily="Verdana" VerticalAlignment="Top"/>
-            <TextBox FontSize="14"  Margin="219.281,223.551,20.469,0" Height="26.48" Name="TelTB" Background="#FFFFFFCC" Foreground="Black" VerticalAlignment="Top" FontFamily="Verdana" BorderBrush="#7F000000"/>
+            <xctk:MaskedTextBox FontSize="14"  Margin="219.281,223.551,20.469,0" Height="26.48" Name="TelTB" Background="#FFFFFFCC" Foreground="Black" VerticalAlignment="Top" FontFamily="Verdana" BorderBrush="#7F000000" Mask="+375 00 000 00 00" />
 
         </Grid>
 

@@ -28,6 +28,7 @@ namespace Wpf_журнал_учащихся_школы.WAdd
         }
         private void start()
         {
+            DayB.Maximum = (DateTime.Today).AddYears(-18);
             SexCB.Items.Add("М");
             SexCB.Items.Add("Ж");
 
